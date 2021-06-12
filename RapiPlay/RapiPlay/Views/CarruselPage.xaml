@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="RapiPlay.Views.CarruselPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <StackLayout>
+                <Image x:Name="imgCabecera" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+            <cv:CarouselViewControl x:Name="listacarrusel" ShowIndicators="True" IndicatorsShape="Circle" IndicatorsTintColor="LightGray"
+                            CurrentPageIndicatorTintColor="#E32B2A" Orientation="Horizontal" InterPageSpacing="0"
+                            ItemsSource="{Binding lista}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                            AnimateTransition="True">
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HorizontalOptions="FillAndExpand"  WidthRequest="300">
+                            <Image Source="{Binding url}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black">
+                <Button Text="Ingresar" Clicked="Button_Clicked" BackgroundColor="#E32B2A" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

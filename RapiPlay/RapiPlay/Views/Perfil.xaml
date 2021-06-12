@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RapiPlay.Views.Perfil">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <ListView BackgroundColor="Black" x:Name="ListMenu" ItemSelected="ListMenu_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell TextColor="White" DetailColor="Black" Height="20" FlyoutItem.IsVisible="True"
+                                   Text="{Binding MenuTitle}"
+                            />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

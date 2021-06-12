@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RapiPlay.Views.IngresoPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+		<Grid BackgroundColor="Black" HorizontalOptions="StartAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<StackLayout Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+						<Image x:Name="imgLogoInicio" Source="https://fernandor26.sg-host.com/imgs/logos/logo-cabecera-carrusel.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+			</StackLayout>
+            <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="90"/>
+            <StackLayout Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+				<Entry x:Name="txtUsuario" Placeholder="Usuario" PlaceholderColor="Black" BackgroundColor="White" TextColor="Black"/>                    
+			</StackLayout>
+			<StackLayout Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                <Entry x:Name="txtContrasenia" Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True" BackgroundColor="White" TextColor="Black"/>
+			</StackLayout>
+			<StackLayout Grid.Row="5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Black" Padding="10">
+				<Button x:Name="btnIngresar" Text="Ingresar" BackgroundColor="#E32B2A" TextColor="White" Clicked="btnIngresar_Clicked"/>
+			</StackLayout>
+		</Grid>           
+    </ContentPage.Content>
+</ContentPage>
