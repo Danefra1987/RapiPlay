@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:RapiPlay.Controls"
              x:Class="RapiPlay.Views.PeliculaPage">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
             <Image Source="logo_rapinet_r"
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="Start" />
-            <SearchBar Placeholder="Buscar película, serie" CancelButtonColor="Orange" 
+            <SearchBar Placeholder="Buscar película, serie" CancelButtonColor="Orange"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center"
                        PlaceholderColor="White" TextChanged="txtBuscar_TextChanged"
                        TextColor="White"
@@ -16,12 +15,6 @@
                        HorizontalTextAlignment="Center"
                        FontSize="Medium"
                        FontAttributes="Italic"/>
-            <!--<Entry x:Name="txtBuscar" Placeholder="buscar..." TextChanged="txtBuscar_TextChanged" ReturnType="Search"
-                   HorizontalOptions="StartAndExpand" VerticalOptions="Center"
-                   FontAttributes="Bold" FontSize="20" IsTextPredictionEnabled="True" MaxLength="20"
-                   PlaceholderColor="White" TextColor="White"/>-->
-            <!--<ImageButton Source="https://image.flaticon.com/icons/png/512/102/102281.png" x:Name="btnBuscar"
-                    WidthRequest="40" HeightRequest="40"/>-->
         </StackLayout>
     </NavigationPage.TitleView>
     

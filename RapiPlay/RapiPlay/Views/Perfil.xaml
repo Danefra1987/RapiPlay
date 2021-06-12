@@ -8,9 +8,27 @@
             <ListView BackgroundColor="Black" x:Name="ListMenu" ItemSelected="ListMenu_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell TextColor="White" DetailColor="Black" Height="20" FlyoutItem.IsVisible="True"
-                                   Text="{Binding MenuTitle}"
-                            />
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="Start">
+                                <Grid x:Name="grdModulos" RowSpacing="10" ColumnSpacing="10" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="9*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Text="{Binding MenuImagen}" FlyoutItem.IsVisible="True" HorizontalOptions="Start"
+                                        FontFamily="{StaticResource FontAwesomeSolid}" FontSize="20"
+                                        BackgroundColor="Transparent" TextColor="Red"
+                                        Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding MenuTitle}" TextColor="White" HorizontalOptions="Start"
+                                        FlyoutItem.IsVisible="True" FontSize="20" VerticalOptions="Center"
+                                           Grid.Row="0" Grid.Column="1"/>
+                                   
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

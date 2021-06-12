@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RapiPlay.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,13 +33,12 @@ namespace RapiPlay.Views
         }
         public void MyMenu()
         {
-            //Detail = new NavigationPage(new ModuloPage());
             List<Menu> menu = new List<Menu>
             {
-                new Menu{Page = new ModuloPage(),MenuTitle="Modulos",MenuDetail="Lista de modulos",MenuImagen=""},
-                new Menu{Page = new CategoriaPage(),MenuTitle="Categorias",MenuDetail="Lista de categorías",MenuImagen=""},
-                new Menu{Page = new CategoriaPage(),MenuTitle="Películas",MenuDetail="Listado de películas",MenuImagen=""},
-                new Menu{Page = new InicioPage(),MenuTitle="Cerrar sesión",MenuDetail="Lista de categorías",MenuImagen=""}
+                new Menu{Page = new ModuloPage(),MenuTitle="Modulos",MenuDetail="Lista de modulos",MenuImagen=FontAwesomeIcons.Module},
+                new Menu{Page = new CategoriaPage(),MenuTitle="Categorias",MenuDetail="Lista de categorías",MenuImagen=FontAwesomeIcons.Module},
+                new Menu{Page = new PeliculaPage(string.Empty),MenuTitle="Películas",MenuDetail="Listado de películas",MenuImagen=FontAwesomeIcons.Categoria},
+                new Menu{Page = new InicioPage(),MenuTitle="Cerrar sesión",MenuDetail="Lista de categorías",MenuImagen=FontAwesomeIcons.Signoutalt}
             };
             ListMenu.ItemsSource = menu;
         }
@@ -48,9 +48,7 @@ namespace RapiPlay.Views
             var menu = e.SelectedItem as Menu;
             if (menu != null)
             {
-                //IsPresented = false;
                 Navigation.PushAsync(menu.Page);
-                //new NavigationPage(menu.Page);
             }
 
         }

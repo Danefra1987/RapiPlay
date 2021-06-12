@@ -11,7 +11,7 @@
         public ModuloPage()
         {
             InitializeComponent();
-            btnUsuario.Text = Application.Current.Properties["Apellido"].ToString().Substring(0, 1).ToUpper();
+            //btnUsuario.Text = Application.Current.Properties["Apellido"].ToString().Substring(0, 1).ToUpper();
             Obtener();
         }
 
@@ -96,15 +96,6 @@
             var id = objSender.ClassId;
             Navigation.PushAsync(new CategoriaPage());
         }
-
-        //async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    if (e.SelectedItem != null)
-        //    {
-        //        var selectedItem = e.SelectedItem as MdlModulo;
-        //        await Shell.Current.GoToAsync($"//todo/todoItem?itemid={selectedItem?.id}");
-        //    }
-        //}
 
         protected override void OnDisappearing()
         {

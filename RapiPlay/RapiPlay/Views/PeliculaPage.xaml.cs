@@ -183,7 +183,6 @@
 
         private void txtBuscar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //Entry searchBar = (Entry)sender;
             SearchBar searchBar = (SearchBar)sender; 
             Obtener(string.Empty, searchBar.Text);
         }

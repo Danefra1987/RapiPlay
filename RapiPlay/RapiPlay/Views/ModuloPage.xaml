@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fontawesome="clr-namespace:RapiPlay.Utils"
              x:Class="RapiPlay.Views.ModuloPage">
 
     <NavigationPage.TitleView>
@@ -8,18 +9,25 @@
             <Image Source="logo_rapinet_r"
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="Start" />
+            
             <Label Text="Módulos" TextColor="White"
                    HorizontalOptions="StartAndExpand"
                    VerticalOptions="Center"
                    FontAttributes="Bold"
                    FontSize="20"/>
-            <ImageButton Source="https://image.flaticon.com/icons/png/512/102/102281.png" x:Name="btnBuscar" 
-                   HorizontalOptions="EndAndExpand" VerticalOptions="Center" Clicked="btnBuscar_Clicked"
-                   WidthRequest="40" HeightRequest="40"/>
-            <Button Text="W" TextColor="White" Background="Gray" x:Name="btnUsuario" Clicked="btnUsuario_Clicked"
-                   WidthRequest="50" VerticalOptions="Center"
-                   FontAttributes="Bold"
-                   FontSize="24"/>
+            <Button x:Name="btnBuscar" Text="{x:Static fontawesome:FontAwesomeIcons.Search}"
+                    FontFamily="{StaticResource FontAwesomeSolid}" BackgroundColor="Transparent" 
+                    TextColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="Center" 
+                    Clicked="btnBuscar_Clicked"
+                    WidthRequest="50" HeightRequest="50"
+                    FontAttributes="Bold"
+                    FontSize="24"/>
+            <Button x:Name="btnUsuario" Text="{x:Static fontawesome:FontAwesomeIcons.Bars}" 
+                    FontFamily="{StaticResource FontAwesomeSolid}" BackgroundColor="Transparent"
+                    TextColor="White"  Clicked="btnUsuario_Clicked" 
+                    WidthRequest="50" HeightRequest="50" VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    FontSize="24"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
